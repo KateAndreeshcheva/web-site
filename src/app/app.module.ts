@@ -7,6 +7,8 @@ import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { WarningComponent } from './warning/warning.component';
 import { ErrorComponent } from './error/error.component';
+import { FormsModule } from '@angular/forms';
+import { DataBindingComponent } from './data-binding/data-binding.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { ErrorComponent } from './error/error.component';
     ServerComponent,
     ServersComponent,
     WarningComponent,
-    ErrorComponent
+    ErrorComponent,
+    DataBindingComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [

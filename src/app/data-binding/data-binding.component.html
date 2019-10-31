@@ -1,0 +1,19 @@
+<p>Name is {{ userName }}</p>
+<input type="text" [(ngModel)] = "userName">
+<hr>
+<button [disabled]="!userName" (click) = "userName = ''">Reset</button>
+<hr>
+<p *ngIf = "userName; else noName" [ngStyle]="{backgroundColor: userName =='k'? 'gray' : 'black' }"> Name is {{ userName }} :)</p>
+<ng-template #noName>
+    <p [ngClass]="{image: !userName}">
+        Ohhhh...Name is empty!
+    </p>
+</ng-template>
+<hr>
+<p *ngFor = "let name of names; let i = index" [ngStyle]="{backgroundColor: i>=2? 'black' : 'gray' }">{{ name }}</p>
+
+<button class="btn btn-primary" (click) = "showPass = true"> Display details</button>
+<p *ngIf = "showPass"> Password: {{ secretPass }}</p>
+
+<button class="btn btn-primary" (click) = "addTime()"> Add to array</button>
+<p *ngFor = "let time of timeArray" [ngStyle]="{backgroundColor: time>=5? 'black' : 'gray' }" [ngClass] = "{whiteText: time>=5}"> {{time}}</p>

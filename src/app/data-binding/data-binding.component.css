@@ -1,0 +1,13 @@
+.online {
+    color: white;
+}
+
+.image {
+    position: absolute;
+    -webkit-animation:spin 2s linear infinite;
+}
+@-webkit-keyframes spin { 50% { -webkit-transform: scaleX(0.2); } }
+
+.whiteText {
+    color: aliceblue;
+}
